@@ -13,7 +13,14 @@ body {
 
 // For get-started section
 .get-started {
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  line-height: 150%;
   text-align: center;
+  &__elements {
+    display: grid;
+    grid-template-columns: auto;
+  }
   &__one,
   &__two,
   &__three {
@@ -22,11 +29,17 @@ body {
     background-color: white;
     margin: auto;
     width: 400px;
+    height: 300px;
     margin-bottom: 40px;
     padding: 20px;
 
     &__desc {
-      text-align: left;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    &__title {
+      margin-top: 50px;
     }
 
     &__number {
@@ -35,7 +48,7 @@ body {
       border-radius: 50%;
       height: 60px;
       width: 60px;
-      margin-left: 43%;
+      margin: auto;
       padding-top: 2px;
     }
   }
@@ -43,6 +56,9 @@ body {
 
 // For about-us section
 .about-us {
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  line-height: 150%;
   box-shadow: 0px 0px 4px gray;
   border-radius: 0.5rem;
   background-color: white;
@@ -109,13 +125,13 @@ label {
 
 .contact-us input,
 .contact-us textarea,
-.contact-us select,
 .contact-us button {
   padding: 0.5em;
   font-size: 1rem;
 }
 
 fieldset {
+  border: none;
   box-shadow: 0px 0px 4px gray;
   border-radius: 0.5rem;
   background-color: white;
@@ -131,4 +147,82 @@ fieldset {
   color: white;
   font-weight: bold;
   border-radius: 0.5rem;
+}
+
+/* Tablet Sizing */
+@media screen and (min-width: 768px) {
+  // For about-us section
+  .about-us {
+    margin: auto;
+    width: 70%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+
+    &__desc {
+      &__1,
+      &__2 {
+        margin: auto;
+        width: 55%;
+        max-width: 768px;
+      }
+    }
+  }
+
+  // For contact-us section
+  fieldset {
+    margin: auto;
+    width: 70%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+  }
+
+  .contact-us input {
+    height: 20px;
+  }
+
+  .contact-us textarea {
+    height: 250px;
+  }
+}
+
+/* Computer Sizing */
+@media screen and (min-width: 1200px) {
+  // For get-started section
+  .get-started {
+    margin: auto;
+    width: 70%;
+    max-width: 1200px;
+    &__elements {
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 20px;
+    }
+    &__one,
+    &__two,
+    &__three {
+      width: auto;
+      height: 80%;
+    }
+  }
+
+  // For about-us section
+  .about-us {
+    padding-left: 0px;
+    padding-right: 0px;
+
+    &__content {
+      padding: 50px 0 50px;
+    }
+  }
+
+  // For contact-us section
+  fieldset {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  #formElements {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+  }
 }

@@ -24,7 +24,6 @@
 
 .nav__toggle svg {
   width: 2.5rem;
-  margin-top: 8px;
 }
 
 .close {
@@ -66,4 +65,42 @@ a:link {
 
 #nav__checkbox:checked ~ label.nav__toggle .menu {
   display: none;
+}
+
+/* For Tablet & Computer Sizing */
+@media screen and (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navbar-links {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+  }
+
+  .navbar h1 {
+    font-size: 40px;
+    margin-top: 50%;
+  }
+
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav__menu {
+    margin-top: 65px;
+    flex-direction: row;
+  }
+
+  .nav__menu li {
+    display: block;
+    padding-left: 45px;
+  }
 }
