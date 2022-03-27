@@ -28,7 +28,7 @@ body {
     border-radius: 0.5rem;
     background-color: white;
     margin: auto;
-    width: 400px;
+    width: 250px;
     height: 300px;
     margin-bottom: 40px;
     padding: 20px;
@@ -151,6 +151,14 @@ fieldset {
 
 /* Tablet Sizing */
 @media screen and (min-width: 768px) {
+  // For get-started section
+  .get-started {
+    &__one,
+    &__two,
+    &__three {
+      width: 400px;
+    }
+  }
   // For about-us section
   .about-us {
     margin: auto;
