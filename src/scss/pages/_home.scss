@@ -1,1 +1,12 @@
 @use '../components/header';
+@use '../base/typography';
+
+$color: black;
+$bg: #efefef;
+
+body {
+  font-family: 'Montserrat VF';
+  background: $bg;
+  color: $color;
+  margin: 0;
+}

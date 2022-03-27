@@ -6,7 +6,183 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Get Started Responsive Page</title>
     <link rel="stylesheet" href="scss/main.scss" />
+    <script type="text/javascript" src="js/index.js"></script>
   </head>
 
-  <body></body>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <h1>D.co</h1>
+        </div>
+        <div class="navbar-links">
+          <nav class="nav">
+            <input type="checkbox" id="nav__checkbox" class="nav__checkbox" />
+            <label for="nav__checkbox" class="nav__toggle">
+              <svg
+                class="menu"
+                fill="#000000"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 50 50"
+                width="50px"
+                height="50px"
+              >
+                <path
+                  d="M 5 9 L 5 11 L 45 11 L 45 9 L 5 9 z M 5 24 L 5 26 L 45 26 L 45 24 L 5 24 z M 5 39 L 5 41 L 45 41 L 45 39 L 5 39 z"
+                />
+              </svg>
+              <svg
+                class="close"
+                fill="#000000"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 50 50"
+                width="50px"
+                height="50px"
+              >
+                <path
+                  d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"
+                />
+              </svg>
+            </label>
+            <ul class="nav__menu">
+              <li>
+                <a
+                  href="#get-started"
+                  id="link1"
+                  class="header-link"
+                  onclick="clickScript('link1')"
+                  >Get Started</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about-us"
+                  id="link2"
+                  class="header-link"
+                  onclick="clickScript('link2')"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  id="link3"
+                  class="header-link"
+                  onclick="clickScript('link3')"
+                  >Contact Me</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="get-started">
+        <h2>Get Started</h2>
+        <div class="get-started__one">
+          <div class="get-started__one__number"><h3>1</h3></div>
+          <div class="get-started__one__title"><h3>Pick a Template</h3></div>
+          <div class="get-started__one__desc">
+            Choose from a selection of over 300 templates. Perfect for
+            Birthdays, Graduations, Anniversaries amd more!
+          </div>
+        </div>
+        <div class="get-started__two">
+          <div class="get-started__two__number"><h3>2</h3></div>
+          <div class="get-started__two__title"><h3>Make it your own</h3></div>
+          <div class="get-started__two__desc">
+            Customize your card by uploading images, videos and writing a
+            personal message!
+          </div>
+        </div>
+        <div class="get-started__three">
+          <div class="get-started__three__number"><h3>3</h3></div>
+          <div class="get-started__three__title"><h3>Share it out</h3></div>
+          <div class="get-started__three__desc">
+            Send your card out by email or text. You can send your card out
+            immediately or schedule it for the perfect time and date.
+          </div>
+        </div>
+      </div>
+
+      <div class="about-us">
+        <div class="about-us__title">
+          <h3>About Us</h3>
+          <div class="about-us__title__underline"><hr /></div>
+        </div>
+        <div class="about-us__desc__1">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+          venenatis laoreet hendrerit. Donec et magna nulla. Nulla hendrerit a
+          lacus vitae ultrices. Donec turpis odio, auctor a ullamcorper eget,
+          malesuada at elit. Sed nec fringilla ex. Maecenas eleifend
+          sollicitudin purus nec vehicula. Donec dolor velit, laoreet
+          ullamcorper placerat id, ultricies bibendum velit. Quisque vel lacinia
+          nibh. In posuere ultrices mi, nec accumsan nisl finibus ac.
+        </div>
+
+        <div class="about-us__desc__2">
+          Duis nec vestibulum magna. Fusce dictum, magna et aliquet tempus, nibh
+          lectus cursus sem, quis viverra diam ante eleifend neque. Phasellus
+          urna leo, congue sed laoreet a, luctus sit amet lorem. Nullam
+          hendrerit suscipit aliquet. Nullam ultricies elementum rutrum. Sed
+          maximus commodo egestas. Mauris egestas ornare lorem pharetra ornare.
+          Nulla interdum tristique laoreet. Pellentesque at fringilla orci.
+          Morbi in pharetra ante. Nullam porta magna mattis scelerisque
+          ultrices. Proin feugiat sit amet dolor in malesuada. Aenean semper
+          nunc at sem placerat, ac varius enim gravida.
+        </div>
+      </div>
+      <div class="contact-us">
+        <form
+          id="contactForm"
+          name="contactForm"
+          method="post"
+          data-netlify="true"
+        >
+          <fieldset>
+            <div class="contact-us__title">
+              <h3>Contact Us</h3>
+              <div class="contact-us__title__underline"><hr /></div>
+            </div>
+
+            <div id="formElements">
+              <!-- Name -->
+              <label for="name">Name (Required)*</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Name"
+                required
+              />
+
+              <!-- Email -->
+              <label for="email">Email (Required)*</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
+
+              <!-- Message -->
+              <label for="message">Message (Optional)</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="8"
+                placeholder="Enter message your here"
+              ></textarea>
+
+              <!-- Submit -->
+              <button type="submit">Send</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+  </body>
 </html>
